@@ -2,12 +2,21 @@
 Host Header Injection Attack
 -----------------------------
 
+Type: Unauthenticated Remote Attack
+
+Software Version: Parallels Remote Application Server 18.0 
+
+
+Description
+-----------
+
 We have identified that the  Web Client of Parallels Remote Application Server 18.0 is affected by Host Header Injection attacks. HTTP host header can be manipulated and cause the application to behave in unexpected ways. Any changes made to the header would just cause the request to be sent to a completely different Domain/IP address. This is due to that the server implicitly trusts the Host header, and fails to validate or escape it properly. 
 
 An attacker would be able to tamper the Host Header value during HTTP request interception (MiTM attack), and then the attacker’s domain will be added in the web page code for redirection, thus forcing the victim’s web browser to redirect to the attacker's domain/malicious web page. This would result in expanding the potential to further attacks and malicious actions.
 
-Below Evidence is provided.
 
+Evidence
+---------
 
 Malicious Request:
 POST / HTTP/1.1
