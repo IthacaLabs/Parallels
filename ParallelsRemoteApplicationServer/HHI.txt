@@ -1,6 +1,6 @@
 
-Host Header Injection Attack
------------------------------
+Host Header Injection Attack - CVE-2022-40870
+---------------------------------------------
 
 Type: Unauthenticated Remote Attack
 
